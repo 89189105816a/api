@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Logger</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Logger</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cpython_data%5Cwb%5Cserver_market%5Clogger.py">c:\users\python_data\wb\server_market\logger.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="copy.html">copy</a><br>
+<a href="gspread.html">gspread</a><br>
+</td><td width="25%" valign=top><a href="io.html">io</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="psycopg2.html">psycopg2</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Logger.html#Logger">Logger</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Logger">class <strong>Logger</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Logger">Logger</a>(heap:&nbsp;list,&nbsp;telegram_token:&nbsp;str,&nbsp;chat_id:&nbsp;str)<br>
+&nbsp;<br>
+Класс&nbsp;логера&nbsp;-&nbsp;результаты&nbsp;успешной/не&nbsp;успешной&nbsp;работы&nbsp;записываем&nbsp;в&nbsp;базу,&nbsp;отправляем&nbsp;уведомление&nbsp;в&nbsp;telegram&nbsp;чат.<br>
+Чтобы&nbsp;не&nbsp;отправлять&nbsp;в&nbsp;базу&nbsp;данные&nbsp;после&nbsp;отработки&nbsp;каждого&nbsp;скрипта&nbsp;заливаем&nbsp;все&nbsp;целиком.&nbsp;Входные&nbsp;данные&nbsp;в&nbsp;логер<br>
+выглядят&nbsp;так&nbsp;[[результаты&nbsp;отработки&nbsp;скриптов&nbsp;по&nbsp;клиенту&nbsp;1],&nbsp;[результаты&nbsp;отработки&nbsp;скриптов&nbsp;по&nbsp;клиенту&nbsp;2],&nbsp;[]...]<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#Logger-parse_heap">parse_heap</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Преобразование&nbsp;кучи&nbsp;с&nbsp;данными&nbsp;в&nbsp;нужный&nbsp;для&nbsp;нас&nbsp;формат<br>
+<a href="#Logger-makelog">makelog</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Отправляем&nbsp;данные&nbsp;в&nbsp;базу&nbsp;и&nbsp;дергаем&nbsp;метод&nbsp;отправки&nbsp;в&nbsp;телеграм<br>
+<a href="#Logger-send_notification">send_notification</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Метод&nbsp;отправки&nbsp;сообщения&nbsp;об&nbsp;успешном&nbsp;завершении/наличия&nbsp;ошибки&nbsp;в&nbsp;телеграм&nbsp;с&nbsp;указанием&nbsp;места&nbsp;ошибки,&nbsp;клиентов&nbsp;..<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Logger-__init__"><strong>__init__</strong></a>(self, heap: list, telegram_token: str, chat_id: str)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Logger-makelog"><strong>makelog</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Logger-parse_heap"><strong>parse_heap</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Logger-send_notification"><strong>send_notification</strong></a>(self, message)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>key</strong> = '1a3f0b9e4c8d2h6j5k7m9p0r2t5w7y'</td></tr></table>
+</body></html>
